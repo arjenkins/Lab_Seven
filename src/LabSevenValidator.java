@@ -12,7 +12,7 @@ public class LabSevenValidator {
 			System.out.println("Name: " + name);
 			System.out.println("Email: " + email);
 			System.out.println("Phone number: " + phnNum);
-			System.out.println("Date: "  +date);
+			System.out.println("Date: "  + date);
 
 			scnr.close();
 
