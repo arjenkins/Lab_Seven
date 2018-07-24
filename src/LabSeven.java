@@ -1,17 +1,23 @@
 import java.util.Scanner;
-import java.util.regex.*;
 
 public class LabSeven {
 	Scanner scnr = new Scanner(System.in);
-//this code does not run :(
 	
+	//these methods check that the user entered information in the correct parameters.
+	//If they did not, the system will prompt them to re-enter information.
+	//If information entered is in proper format, the program will display entered inputs entered.
+	
+	
+	//this method checks to validate the user name  for specific # of alphanumeric characters
 	public static String getName(Scanner scnr, String prompt) {
 	 boolean isValid = true;
 	 String name;
 	 do {
 		 System.out.println(prompt);
 		 name = scnr.next();
-		 if (name.matches("[A-Z]{1}[a-z]{1,29}")) {
+		 if (name.matches("[A-Z]{1}[a-z]{1,29}")) { 
+			// ^^ checking for specific # of alphanumeric characters from user
+			 
 			 isValid = false;
 		 } else {
 			 System.out.println("Please enter a valid name, with the first letter capitalized, "
@@ -20,7 +26,7 @@ public class LabSeven {
 		 } while (isValid);
 		 return name;
 	 }
-	 
+	 //this method checks for a specific # of alphanumeric characters from user to validate the user email 
 	 public static String getEmail(Scanner scnr, String prompt) {
 	 boolean isValid = true;
 	 String email;
@@ -35,7 +41,7 @@ public class LabSeven {
 	 } while (isValid);
 	 return email;
 	 }
-
+	 //this method checks to validate if the user phone number has a certain # of alphanumeric characters
 	public static String getNum(Scanner scnr, String prompt) {
 		boolean isValid = true;
 		String phnNum;
@@ -50,7 +56,7 @@ public class LabSeven {
 		} while (isValid);
 		return phnNum;
 	}
-
+	//this method checks to validate if the date is in proper format, and user user correct quantity of numbers 
 	public static String getDate(Scanner scnr, String prompt) {
 		boolean isValid = true;
 		String date;
@@ -62,7 +68,7 @@ public class LabSeven {
 			} else {
 				System.out.println("Please enter a valid date in the mm/dd/yyyy format.");
 			}
-		} while (isValid);
+		} while (isValid); 
 		return date;
 	}
 }
